@@ -293,12 +293,90 @@ PHASE 6: EVALUATION + PROJECT REPORT
 - Establish reporting mechanisms
 - Define learning and adaptation processes
 
+#### C. Project Culture Definition
+
+**Purpose**: Establish the values, norms, and behaviors that will guide how the project team and community interact throughout the project.
+
+**Reflection Prompts**:
+- What values should guide our project? (e.g., inclusivity, transparency, respect, creativity)
+- How do we want team members to treat each other?
+- How do we want to engage with the community?
+- How will we handle conflicts when they arise?
+- How will we make decisions together?
+- How will we celebrate successes and learn from challenges?
+
+**Culture Dimensions to Define**:
+
+**1. Inclusivity**
+- How will we ensure all voices are heard?
+- What mechanisms will we use to include marginalized groups?
+- How will we address power imbalances?
+- How will we accommodate different communication styles?
+
+**2. Engagement**
+- How will we keep community members engaged throughout the project?
+- What recognition or appreciation will we show for contributions?
+- How will we make participation meaningful and rewarding?
+- How will we handle varying levels of participation?
+
+**3. Creativity & Innovation**
+- How will we encourage creative thinking?
+- What space will we create for new ideas?
+- How will we experiment and learn from failures?
+- How will we adapt our approach based on new insights?
+
+**4. Conflict Resolution**
+- What process will we use to address conflicts?
+- How will we ensure conflicts are addressed constructively?
+- Who will facilitate conflict resolution?
+- How will we prevent conflicts from escalating?
+- How will we repair relationships after conflicts?
+
+**5. Decision-Making**
+- How will decisions be made? (consensus, majority, expert-led)
+- Who has decision-making authority for different types of decisions?
+- How will we ensure decisions are transparent?
+- How will we communicate decisions to all stakeholders?
+
+**6. Communication**
+- How will we communicate within the team?
+- How will we communicate with the community?
+- What language will we use? (literal and figurative)
+- How often will we communicate?
+- What channels will we use?
+
+**7. Learning & Adaptation**
+- How will we capture and share lessons learned?
+- How will we adapt our approach based on feedback?
+- How will we handle mistakes and failures?
+- How will we celebrate and build on successes?
+
+**Measures to Foster Project Culture**:
+- Regular team reflection sessions
+- Culture check-ins at meetings
+- Recognition and appreciation rituals
+- Conflict resolution training
+- Inclusive facilitation techniques
+- Transparent decision-making processes
+- Open feedback channels
+- Celebration of milestones and achievements
+
+**Output**: **Project Culture Framework**
+- Project values statement
+- Culture guidelines and norms
+- Conflict resolution protocol
+- Decision-making framework
+- Communication guidelines
+- Engagement strategies
+- Learning and adaptation processes
+
 **Outputs**:
 - Situation analysis report
 - Identified and prioritized needs for intervention
 - Theory of Change document and diagram
 - Stakeholder analysis and engagement plan
 - **Detailed intervention plan with specific interventions defined**
+- **Project Culture Framework**
 - Resource mobilization plan
 - Budget
 - Monitoring and Evaluation (M&E) framework
@@ -309,6 +387,7 @@ PHASE 6: EVALUATION + PROJECT REPORT
 - [ ] Theory of Change developed
 - [ ] Stakeholders mapped
 - [ ] **Interventions clearly defined**
+- [ ] **Project culture framework established**
 - [ ] Budget approved
 - [ ] M&E framework established
 
