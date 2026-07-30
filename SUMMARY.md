@@ -2,7 +2,7 @@
 
 ## 🎉 What We've Created
 
-This repository now contains a **complete workflow design and implementation guide** for building an open-source, offline-first, accessible environment for sociocultural project development.
+This repository contains a **complete linear workflow design** for building an open-source, offline-first, accessible environment for sociocultural project development.
 
 ## 📁 Repository Contents
 
@@ -13,8 +13,8 @@ community_based_project_dev/
 ├── LICENSE                            # MIT License
 ├── SUMMARY.md                         # This file
 │
-├── WORKFLOW_DESIGN.md                 # Detailed 7-phase workflow specification
-├── WORKFLOW_VISUAL.md                 # Visual representations and diagrams
+├── WORKFLOW_DESIGN.md                 # Detailed 6-phase LINEAR workflow
+├── WORKFLOW_VISUAL.md                 # Visual representations (linear flow)
 ├── IMPLEMENTATION_GUIDE.md             # Technical implementation details
 │
 ├── docs/
@@ -25,25 +25,6 @@ community_based_project_dev/
 │       └── architecture.md             # Technical architecture
 │
 └── src/                               # Directory structure for implementation
-    ├── frontend/
-    │   └── src/
-    │       ├── components/
-    │       │   ├── common/
-    │       │   ├── layout/
-    │       │   └── phases/
-    │       ├── composables/
-    │       ├── stores/
-    │       ├── router/
-    │       ├── services/
-    │       ├── utils/
-    │       └── styles/
-    │
-    ├── backend/
-    │   ├── routes/
-    │   ├── controllers/
-    │   └── models/
-    │
-    └── shared/
 ```
 
 ## ✨ Key Features of the Design
@@ -51,19 +32,44 @@ community_based_project_dev/
 ### Ethical Principles Addressed
 - ✅ **Open Source**: MIT License, all code freely available
 - ✅ **Accessible**: Comprehensive accessibility design (WCAG compliant)
-- ✅ **Easy to Use**: Intuitive 7-phase workflow
-- ✅ **Offline-First**: Full functionality without internet
+- ✅ **Easy to Use**: Intuitive 6-phase LINEAR workflow
+- ✅ **Offline-First**: Full functionality without internet connection
 - ✅ **Data Protection**: Local storage, encryption options, privacy by design
 - ✅ **Data Light**: Efficient storage, compression, cleanup tools
 
-### 7-Phase Workflow
-1. **Setup** - Professionals define project context
-2. **Pre-Project** - Community data collection (notes, photos, observations)
-3. **Topic Selection** - Cluster data and select focus area
-4. **Situation Analysis** - Comprehensive analysis using participatory methods
-5. **Conceptualisation** - Develop Theory of Change, stakeholder maps, intervention plans
-6. **Implementation** - Execute with monitoring and evaluation tools
-7. **Evaluation** - Assess outcomes and impact
+### **LINEAR 6-Phase Workflow**
+
+```
+PHASE 1: SETUP
+    ↓
+PHASE 2: PRE-PROJECT (Data Collection)
+    ↓
+PHASE 3: TOPIC SELECTION + PROJECT CONFIGURATION
+    ↓
+PHASE 4: CONCEPTUALISATION (includes Situation Analysis + Define Interventions)
+    ↓
+PHASE 5: IMPLEMENTATION
+    ↓
+PHASE 6: EVALUATION + PROJECT REPORT
+```
+
+**Key Changes from Previous Version:**
+- Removed Phase 4 (Situation Analysis) as separate phase
+- Integrated Situation Analysis into Phase 4 (Conceptualisation)
+- **Project Configuration now happens in Phase 3** (after topic selection)
+- **Interventions are defined in Phase 4** (Conceptualisation)
+- **Phase 6 ends with Project Report** (final deliverable)
+
+### Phase Breakdown
+
+| Phase | Name | Key Activity | Output | Actors |
+|-------|------|--------------|--------|--------|
+| 1 | Setup | Define project context | Project configuration | Professionals |
+| 2 | Pre-Project | Collect community data | Raw data collection | Professionals + Community |
+| 3 | Topic Selection + Config | Cluster data, select topic, **finalize project config** | Selected topic + Final config | Professionals + Community |
+| 4 | Conceptualisation | Situation analysis + **define interventions** | Intervention plan + Defined interventions | Professionals |
+| 5 | Implementation | Execute interventions | Activity data + Monitoring data | All Users |
+| 6 | Evaluation + Report | Assess outcomes, **create project report** | **PROJECT REPORT** (Final) | All Users + Evaluators |
 
 ### Technical Highlights
 - **Offline-First**: Works without internet, optional sync
@@ -96,12 +102,10 @@ community_based_project_dev/
    - Works offline
    - Good performance
 
-4. **Implement MVP First**
-   - Project setup
-   - Data collection
-   - Basic clustering
-   - Topic selection
-   - Simple analysis
+4. **Implement Linear Flow**
+   - Users must complete each phase before advancing
+   - Clear completion criteria for each phase
+   - Ability to go back and edit previous phases
 
 ### Technology Stack Summary
 
@@ -132,28 +136,24 @@ community_based_project_dev/
 - [ ] Implement repositories (Dexie)
 - [ ] Create services (DataService, SyncService, StorageService)
 - [ ] Set up state management (Pinia stores)
-- [ ] Implement routing
-- [ ] Create basic UI components (buttons, forms, modals)
+- [ ] Implement routing with phase guards
+- [ ] Create basic UI components
 
-### Phase 3: Implement MVP Features (3-4 weeks)
-- [ ] Project setup (Phase 1)
-- [ ] Data collection (Phase 2)
-- [ ] Data clustering (Phase 3)
-- [ ] Topic selection (Phase 3)
-- [ ] Basic situation analysis (Phase 4)
-- [ ] Offline functionality
-- [ ] Data export/import
+### Phase 3: Implement Linear Workflow (3-4 weeks)
+- [ ] Phase 1: Setup (project creation)
+- [ ] Phase 2: Pre-Project (data collection)
+- [ ] Phase 3: Topic Selection + Project Configuration
+- [ ] Phase 4: Conceptualisation (situation analysis + intervention definition)
+- [ ] Phase 5: Implementation (activity tracking)
+- [ ] Phase 6: Evaluation + Project Report
+- [ ] Phase transition logic and validation
 
-### Phase 4: Add Advanced Features (4-6 weeks)
-- [ ] Theory of Change builder (Phase 5)
-- [ ] Stakeholder mapping (Phase 5)
-- [ ] Intervention planning (Phase 5)
-- [ ] Budget calculation (Phase 5)
-- [ ] M&E framework (Phase 5)
-- [ ] Implementation tracking (Phase 6)
-- [ ] Evaluation tools (Phase 7)
-- [ ] Multi-device sync
+### Phase 4: Add Features (4-6 weeks)
+- [ ] Offline synchronization
 - [ ] Advanced accessibility
+- [ ] Multi-language support
+- [ ] Data export/import
+- [ ] Reporting tools
 
 ### Phase 5: Polish and Test (2-3 weeks)
 - [ ] Performance optimization
@@ -164,61 +164,54 @@ community_based_project_dev/
 - [ ] Documentation
 
 ### Phase 6: Deploy (1 week)
-- [ ] Choose deployment option (Static hosting recommended)
+- [ ] Choose deployment option
 - [ ] Set up hosting
-- [ ] Configure domain (if needed)
 - [ ] Create installation guides
 - [ ] Deploy to production
 
 ## 💡 Key Design Decisions
 
-### Why PWA?
-- **Accessibility**: Works on any device with a browser
-- **No Installation**: Users can start immediately
-- **Offline Capable**: Service workers enable offline use
-- **Progressive Enhancement**: Works on all browsers, better on modern ones
-- **Discoverable**: Can be found via search engines
-- **Engageable**: Can be installed to home screen
+### Why Linear?
+- **Clear Progression**: Users always know what to do next
+- **Structured Process**: Ensures all steps are completed
+- **Quality Control**: Prevents skipping important steps
+- **Audit Trail**: Easy to track project progress
+- **User-Friendly**: Reduces decision fatigue
 
-### Why Vue.js?
-- **Easy to Learn**: Gentle learning curve
-- **Flexible**: Can be as simple or complex as needed
-- **Good Documentation**: Excellent official docs
-- **Community**: Large, active community
-- **Ecosystem**: Rich ecosystem of plugins and tools
-- **Performance**: Good performance characteristics
+### Why Integrate Situation Analysis into Conceptualisation?
+- **Logical Flow**: Analysis naturally leads to intervention design
+- **Efficiency**: Reduces phase transitions
+- **Context**: Analysis provides foundation for intervention definition
+- **Simplicity**: Fewer phases = easier to understand
 
-### Why Offline-First?
-- **Accessibility**: Works in areas with no/poor internet
-- **Reliability**: No dependency on network connectivity
-- **Speed**: Instant response, no network latency
-- **Privacy**: Data stays local by default
-- **Cost**: No server costs for basic usage
+### Why Project Configuration in Phase 3?
+- **Informed Decisions**: Configuration based on actual data
+- **Topic-Driven**: Scope and boundaries defined by selected topic
+- **Stakeholder Buy-in**: Community input incorporated before finalizing
+- **Flexibility**: Can adjust based on data collected
 
-### Why IndexedDB?
-- **Browser Native**: Built into all modern browsers
-- **Large Storage**: Can store significant amounts of data
-- **Asynchronous**: Non-blocking operations
-- **Transaction Support**: ACID transactions
-- **Index Support**: Efficient querying
+### Why Define Interventions in Phase 4?
+- **After Analysis**: Interventions based on identified needs
+- **Informed Design**: Uses all previous data and analysis
+- **Logical Sequence**: Needs → Interventions → Resources → Budget
+- **Comprehensive**: All planning happens together
 
 ## 🎯 Questions to Answer Before Implementation
 
-1. **Target Users**: Who are the primary users? (Professionals, community members, both?)
-2. **Team Size**: What's the typical team size for projects?
-3. **Languages**: Which languages need to be supported initially?
-4. **Data Volume**: How much data will typical projects have?
-5. **Sync Requirements**: Is multi-device sync needed? If so, peer-to-peer or server-based?
-6. **Platform Priority**: Which platforms are most important? (Web, Desktop, Mobile)
-7. **Accessibility Requirements**: Any specific accessibility needs?
-8. **Data Protection Requirements**: Any specific regulations to comply with?
+1. **Phase Completion**: What are the specific criteria for completing each phase?
+2. **Data Thresholds**: What's the minimum data required to advance from Phase 2 to Phase 3?
+3. **Approval Workflow**: Who needs to approve phase transitions?
+4. **Backtracking**: Should users be able to go back to previous phases? If so, with what restrictions?
+5. **Project Configuration**: What specific fields are required for project configuration in Phase 3?
+6. **Intervention Definition**: What level of detail is required for interventions in Phase 4?
+7. **Report Requirements**: What sections must be included in the final project report?
 
 ## 📚 Documentation Available
 
 ### For Users
 - [Getting Started Guide](docs/USER_GUIDES/getting-started.md)
-- [Workflow Overview](WORKFLOW_DESIGN.md)
-- [Visual Workflow](WORKFLOW_VISUAL.md)
+- [Workflow Overview](WORKFLOW_DESIGN.md) - **UPDATED: Linear 6-phase workflow**
+- [Visual Workflow](WORKFLOW_VISUAL.md) - **UPDATED: Linear flow diagrams**
 
 ### For Developers
 - [Implementation Guide](IMPLEMENTATION_GUIDE.md)
@@ -248,6 +241,7 @@ community_based_project_dev/
 5. **Privacy-First**: Respects user data and privacy
 6. **Ecological**: Minimizes data usage and resource consumption
 7. **Open Source**: Free and open for anyone to use and contribute to
+8. **Linear Workflow**: Clear, structured process that's easy to follow
 
 ## 📞 Support and Community
 
@@ -257,15 +251,18 @@ community_based_project_dev/
 
 ## 🚀 Ready to Start?
 
-The workflow is designed and ready for implementation. The next step is to:
+The **linear workflow is now designed and ready for implementation**. The key changes are:
 
-1. **Review the design** with your team
-2. **Answer the key questions** above
-3. **Choose your implementation path**
-4. **Start coding!**
+1. **6 phases instead of 7** (Situation Analysis integrated into Conceptualisation)
+2. **Project Configuration in Phase 3** (after topic selection)
+3. **Interventions defined in Phase 4** (Conceptualisation)
+4. **Project Report in Phase 6** (final deliverable)
+
+All documentation has been updated to reflect this linear flow.
 
 ---
 
-*Project Status: 🏗️ Workflow Design Complete | Implementation Ready*
+*Project Status: 🏗️ Linear Workflow Design Complete | Implementation Ready*
 *Last Updated: 2024*
 *License: MIT*
+*Workflow Version: 2.0 (Linear)*

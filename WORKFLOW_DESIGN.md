@@ -12,67 +12,154 @@ This workflow is designed according to the following ethical decisions:
 
 ## Overview
 
-This workflow supports bottom-up, participatory, and locally-led sociocultural projects through six distinct phases:
+This workflow supports bottom-up, participatory, and locally-led sociocultural projects through **6 distinct linear phases**:
 
 1. **Setup Phase** - Professionals define project context
-2. **Pre-Project Phase** - Data collection from community
-3. **Topic Selection Phase** - Cluster data and select focus
-4. **Situation Analysis Phase** - Comprehensive analysis using participatory methods
-5. **Conceptualisation Phase** - Develop intervention theory and plans
-6. **Implementation Phase** - Execute with monitoring and evaluation
-7. **Evaluation Phase** - Assess outcomes and impact
+2. **Pre-Project Phase** - Community data collection (notes, chats, discussions, observations, photos)
+3. **Topic Selection Phase** - Cluster data and select focus area + **Project Configuration**
+4. **Conceptualisation Phase** - Develop Theory of Change, stakeholder maps, intervention plans, budget, M&E concept
+5. **Implementation Phase** - Execute with monitoring and evaluation tools
+6. **Evaluation Phase** - Assess outcomes and impact, ending with **Project Report**
 
-## Detailed Workflow
+**Note**: Situation Analysis is integrated into the Conceptualisation Phase as the foundation for defining interventions.
 
-### Phase 1: Setup (Professionals Only)
+---
 
-**Purpose**: Define the overall theme and context for the project environment
+## Linear Workflow Diagram
 
-**Actors**: Professionals/Coordinators
+```
+PHASE 1: SETUP
+┌─────────────────────────────────────┐
+│ Professionals define project context  │
+│ - Theme/Title                         │
+│ - Geographic scope                   │
+│ - Language preferences               │
+│ - Data protection settings            │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+PHASE 2: PRE-PROJECT
+┌─────────────────────────────────────┐
+│ Collect data from community          │
+│ - Text notes from chats/discussions  │
+│ - Observations                       │
+│ - Photos with annotations            │
+│ - Audio notes (optional)             │
+│ - Tag and categorize data            │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+PHASE 3: TOPIC SELECTION + PROJECT CONFIGURATION
+┌─────────────────────────────────────┐
+│ Cluster data into topics              │
+│ - Review all collected data           │
+│ - Identify patterns and themes        │
+│ - Create topic clusters               │
+│ - Select primary topic                │
+│ - **Configure project**               │
+│   - Finalize project scope            │
+│   - Define project boundaries         │
+│   - Set project timeline              │
+│   - Confirm stakeholders              │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+PHASE 4: CONCEPTUALISATION (includes Situation Analysis)
+┌─────────────────────────────────────┐
+│ Develop comprehensive intervention    │
+│ plan based on analysis                │
+│                                                                      │
+│ SITUATION ANALYSIS (Foundation):      │
+│ - Participatory methods               │
+│ - Desk review                         │
+│ - Interviews                          │
+│ - **Output: Identified needs**        │
+│                                                                      │
+│ INTERVENTION DESIGN:                 │
+│ - Theory of Change                    │
+│ - Stakeholder Mapping                 │
+│ - **Define Interventions**           │
+│   - Specific intervention activities  │
+│   - Objectives and indicators         │
+│   - Target groups                     │
+│ - Resource & Budget Planning          │
+│ - Monitoring & Evaluation Concept     │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+PHASE 5: IMPLEMENTATION
+┌─────────────────────────────────────┐
+│ Execute the intervention plan         │
+│ - Activity tracking                   │
+│ - Progress monitoring                 │
+│ - Data collection (M&E)               │
+│ - Adjustments based on findings       │
+│ - Regular reporting                   │
+│ - Community feedback sessions         │
+└─────────────────────────────────────┘
+                    │
+                    ▼
+PHASE 6: EVALUATION + PROJECT REPORT
+┌─────────────────────────────────────┐
+│ Assess outcomes and impact            │
+│ - Final evaluation                    │
+│ - Data analysis                       │
+│ - Lessons learned                     │
+│ - Recommendations                    │
+│ - Impact assessment                   │
+│ - **PROJECT REPORT**                  │
+│   - Complete documentation            │
+│   - Findings and conclusions          │
+│   - Lessons and recommendations       │
+│   - Archive for future reference      │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Detailed Phase Descriptions
+
+### Phase 1: Setup
+
+**Purpose**: Professionals define the initial project context and parameters.
+
+**Actors**: Professionals/Coordinators only
 
 **Activities**:
-- Create new project environment
+- Create new project
 - Define project theme/title
-- Set project duration estimates
-- Define geographic scope
-- Set language preferences
-- Configure data protection settings
-- Define user roles and permissions
+- Set geographic scope (Local/Regional/National)
+- Define primary language and secondary languages
+- Configure data protection level (High/Medium/Low)
+- Set initial user roles and permissions
+- Define basic project metadata
 
 **Outputs**:
-- Project configuration file
-- Initial project metadata
+- Project configuration (initial)
+- User accounts for professionals
+- Project metadata
 
-**Data Structure**:
-```yaml
-project:
-  id: unique_identifier
-  title: "Project Theme/Title"
-  description: "Brief description of project focus"
-  start_date: YYYY-MM-DD
-  estimated_duration: months
-  geographic_scope: "Local/Regional/National"
-  primary_language: "en"
-  secondary_languages: ["es", "fr"]
-  data_protection_level: "high/medium/low"
-  created_by: user_id
-  created_at: timestamp
-```
+**Phase Completion Criteria**:
+- [ ] Project created with basic metadata
+- [ ] At least one professional user configured
+- [ ] Language and accessibility settings defined
 
 ---
 
 ### Phase 2: Pre-Project Phase
 
-**Purpose**: Collect initial data and insights from community members and professionals
+**Purpose**: Collect initial data and insights from community members and professionals to understand the context.
 
 **Actors**: Professionals and Community Members
 
 **Activities**:
-- Create notes from chats and discussions
-- Document observations
+- Create text notes from chats and discussions
+- Document observations from field visits
 - Upload and annotate photos
-- Tag data with keywords
-- Categorize data by source type
+- Record audio notes (optional, for accessibility)
+- Tag data with keywords for organization
+- Categorize data by source type (chat, discussion, observation, photo)
+- Add accessibility notes for screen readers
 
 **Data Types**:
 1. **Text Notes**: Free-form text from discussions, chats, observations
@@ -83,14 +170,270 @@ project:
 **Outputs**:
 - Collection of raw data entries
 - Initial tags and categories
+- Community insights
 
-**Data Structure**:
+**Phase Completion Criteria**:
+- [ ] Sufficient data collected to identify patterns
+- [ ] Data from multiple sources (community, professionals, observations)
+- [ ] Data properly tagged and categorized
+
+---
+
+### Phase 3: Topic Selection + Project Configuration
+
+**Purpose**: Organize collected data into meaningful topics, select the focus area, and finalize project configuration.
+
+**Actors**: Professionals (with community input)
+
+**Activities**:
+
+#### A. Data Clustering
+- Review all collected data
+- Identify patterns and themes
+- Create topic clusters
+- Group related data entries into clusters
+- Name and describe each cluster
+
+#### B. Topic Selection
+- Present clusters to community for feedback
+- Select primary topic for project focus
+- Archive or defer other clusters for future consideration
+- Document rationale for selection
+
+#### C. Project Configuration (Finalization)
+- Finalize project scope based on selected topic
+- Define clear project boundaries
+- Set detailed project timeline
+- Confirm and refine stakeholder list
+- Define success criteria
+- Set communication protocols
+
+**Outputs**:
+- Clustered data with topic assignments
+- Selected primary topic with rationale
+- Archived secondary topics
+- **Finalized project configuration**
+
+**Phase Completion Criteria**:
+- [ ] Data successfully clustered into topics
+- [ ] Primary topic selected
+- [ ] Project configuration finalized
+- [ ] Stakeholders confirmed
+
+---
+
+### Phase 4: Conceptualisation (Includes Situation Analysis)
+
+**Purpose**: Develop a comprehensive understanding of the selected topic and create a detailed intervention plan.
+
+**Actors**: Professionals (with community participation)
+
+**Activities**:
+
+#### A. Situation Analysis (Foundation for Intervention Design)
+
+**Participatory Methods**:
+- Community mapping exercises
+- Focus group discussions (documented)
+- Participatory rural appraisal (PRA) techniques
+- Community scorecards
+- Social mapping
+
+**Desk Review**:
+- Literature review
+- Existing data analysis
+- Policy document review
+- Previous project reports
+
+**Interviews**:
+- Key informant interviews
+- Stakeholder interviews
+- Community member interviews
+- Structured interview guides
+
+**Output**: **Identified Needs for Intervention**
+- Comprehensive list of needs
+- Prioritized needs
+- Evidence for each need
+- Affected groups for each need
+
+#### B. Intervention Design
+
+**Theory of Change**:
+- Define long-term vision
+- Map outcome pathways
+- Identify assumptions and preconditions
+- Create visual Theory of Change diagram
+
+**Stakeholder Mapping**:
+- Identify all relevant stakeholders
+- Categorize by influence and interest
+- Map relationships between stakeholders
+- Define engagement strategies for each stakeholder
+- Identify potential champions and blockers
+
+**Define Interventions**:
+- Develop specific intervention activities
+- Set clear objectives for each intervention
+- Define indicators for success
+- Identify target groups
+- Define implementation approach
+- Set timeline for each intervention
+
+**Resource and Budget Planning**:
+- Identify required resources (human, financial, material)
+- Create detailed budget with income and expenses
+- Identify funding sources
+- Develop resource mobilization plan
+
+**Monitoring and Evaluation Concept**:
+- Define monitoring framework
+- Develop evaluation questions
+- Design data collection tools
+- Establish reporting mechanisms
+- Define learning and adaptation processes
+
+**Outputs**:
+- Situation analysis report
+- Identified and prioritized needs for intervention
+- Theory of Change document and diagram
+- Stakeholder analysis and engagement plan
+- **Detailed intervention plan with specific interventions defined**
+- Resource mobilization plan
+- Budget
+- Monitoring and Evaluation (M&E) framework
+
+**Phase Completion Criteria**:
+- [ ] Situation analysis completed
+- [ ] Needs for intervention clearly identified and prioritized
+- [ ] Theory of Change developed
+- [ ] Stakeholders mapped
+- [ ] **Interventions clearly defined**
+- [ ] Budget approved
+- [ ] M&E framework established
+
+---
+
+### Phase 5: Implementation
+
+**Purpose**: Execute the intervention plan with ongoing monitoring and evaluation.
+
+**Actors**: Professionals, Community Members, Stakeholders
+
+**Activities**:
+- Execute planned intervention activities
+- Monitor progress against indicators
+- Collect monitoring data using defined tools
+- Adjust implementation based on findings
+- Conduct regular reporting
+- Hold community feedback sessions
+- Document challenges and solutions
+
+**Tools Available**:
+- Activity tracking dashboard
+- Progress monitoring tools
+- Data collection forms (based on M&E framework)
+- Reporting templates
+- Communication tools
+- Document repository
+
+**Outputs**:
+- Activity progress reports
+- Monitoring data
+- Progress updates
+- Adjustment decisions and rationale
+- Community feedback documentation
+
+**Phase Completion Criteria**:
+- [ ] All planned interventions executed
+- [ ] Monitoring data collected regularly
+- [ ] Progress tracked against indicators
+- [ ] Adjustments documented
+
+---
+
+### Phase 6: Evaluation + Project Report
+
+**Purpose**: Assess the outcomes and impact of the intervention, and create a comprehensive project report.
+
+**Actors**: Professionals, Community Members, External Evaluators (optional)
+
+**Activities**:
+
+#### A. Final Evaluation
+- Conduct comprehensive evaluation
+- Analyze all collected monitoring data
+- Assess achievement of objectives
+- Evaluate intervention effectiveness
+
+#### B. Methods
+- Outcome harvesting
+- Most significant change technique
+- Participatory evaluation
+- Quantitative analysis
+- Qualitative analysis
+
+#### C. Documentation
+- Document lessons learned
+- Develop recommendations for future projects
+- Create impact assessment
+- Gather stakeholder feedback
+
+#### D. Project Report Creation
+- Compile all findings
+- Document the complete project journey
+- Include all analysis and results
+- Add lessons learned and recommendations
+- Create executive summary
+- Format for different audiences (technical, community, funders)
+
+**Outputs**:
+- Evaluation report
+- Lessons learned document
+- Recommendations for future projects
+- Impact assessment
+- **COMPREHENSIVE PROJECT REPORT** (Final deliverable)
+  - Complete project documentation
+  - All findings and conclusions
+  - Lessons and recommendations
+  - Impact assessment
+  - Archive-ready format
+
+**Phase Completion Criteria**:
+- [ ] Final evaluation completed
+- [ ] All data analyzed
+- [ ] Lessons learned documented
+- [ ] **Project report finalized and approved**
+- [ ] Report shared with stakeholders
+- [ ] Project archived
+
+---
+
+## Data Structures
+
+### Phase 1: Setup
+```yaml
+project:
+  id: unique_identifier
+  title: "Project Theme/Title"
+  description: "Brief description"
+  geographic_scope: "Local/Regional/National"
+  primary_language: "en"
+  secondary_languages: ["es", "fr"]
+  data_protection_level: "high/medium/low"
+  status: "phase1_setup"
+  created_by: user_id
+  created_at: timestamp
+```
+
+### Phase 2: Pre-Project
 ```yaml
 data_entry:
   id: unique_identifier
+  project_id: reference_to_project
   type: "text|photo|audio|observation"
   content: "Text content or file reference"
-  author: user_id
+  author_id: user_id
   author_role: "professional|community_member"
   timestamp: ISO_timestamp
   location: optional_gps_or_description
@@ -98,49 +441,16 @@ data_entry:
   source: "chat|discussion|observation|photo"
   language: "en"
   accessibility_notes: "Description for screen readers"
+  phase: "phase2_pre_project"
 ```
 
-**Accessibility Features**:
-- Voice-to-text for audio notes
-- Text-to-speech for reading notes
-- High contrast mode
-- Large text options
-- Screen reader compatibility
-- Multiple language support
-
----
-
-### Phase 3: Topic Selection Phase
-
-**Purpose**: Organize collected data into meaningful topics and select focus area
-
-**Actors**: Professionals (with community input)
-
-**Activities**:
-- Review all collected data
-- Identify patterns and themes
-- Create topic clusters
-- Group related data entries
-- Name and describe each cluster
-- Select primary topic for project focus
-- Archive or defer other clusters for future consideration
-
-**Methods**:
-- Affinity diagramming (digital)
-- Thematic analysis
-- Community voting on priority topics
-
-**Outputs**:
-- Clustered data with topic assignments
-- Selected primary topic
-- Archived secondary topics
-
-**Data Structure**:
+### Phase 3: Topic Selection + Project Configuration
 ```yaml
 cluster:
   id: unique_identifier
+  project_id: reference_to_project
   name: "Cluster Name"
-  description: "Brief description of the cluster theme"
+  description: "Description of the cluster theme"
   data_entries: [entry_id_1, entry_id_2, ...]
   keywords: ["keyword1", "keyword2"]
   created_by: user_id
@@ -148,66 +458,49 @@ cluster:
   status: "active|archived|selected"
 
 selected_topic:
+  project_id: reference_to_project
   cluster_id: reference_to_selected_cluster
   selection_date: timestamp
   selected_by: user_id
   rationale: "Why this topic was selected"
+  phase: "phase3_topic_selection"
+
+project_configuration:
+  id: unique_identifier
+  project_id: reference_to_project
+  final_scope: "Detailed project scope"
+  boundaries: "Geographic and thematic boundaries"
+  timeline: 
+    start_date: YYYY-MM-DD
+    end_date: YYYY-MM-DD
+    milestones: [milestone1, milestone2]
+  stakeholders: [stakeholder_id_1, stakeholder_id_2]
+  success_criteria: ["criteria1", "criteria2"]
+  communication_protocol: "How team will communicate"
+  configured_at: timestamp
+  configured_by: user_id
+  phase: "phase3_topic_selection"
 ```
 
----
-
-### Phase 4: Situation Analysis Phase
-
-**Purpose**: Develop comprehensive understanding of the selected topic through systematic analysis
-
-**Actors**: Professionals (with community participation)
-
-**Activities**:
-
-#### A. Participatory Methods
-- Community mapping exercises
-- Focus group discussions (documented)
-- Participatory rural appraisal (PRA) techniques
-- Community scorecards
-- Social mapping
-
-#### B. Desk Review
-- Literature review
-- Existing data analysis
-- Policy document review
-- Previous project reports
-
-#### C. Interviews
-- Key informant interviews
-- Stakeholder interviews
-- Community member interviews
-- Structured interview guides
-
-**Outputs**:
-- Situation analysis report
-- Identified needs for intervention
-- Stakeholder map (initial)
-- Context analysis
-
-**Data Structure**:
+### Phase 4: Conceptualisation
 ```yaml
 situation_analysis:
   id: unique_identifier
-  topic_id: reference_to_selected_topic
+  project_id: reference_to_project
   methods_used: ["participatory_mapping", "desk_review", "interviews"]
   
   participatory_data:
     - method: "community_mapping"
       date: timestamp
       participants: [user_id_1, user_id_2, ...]
-      findings: "Key findings from the exercise"
+      findings: "Key findings"
       visual_output: file_reference
     
   desk_review:
     - document: "Document title"
       source: "Source organization"
       date: YYYY-MM-DD
-      relevance: "How it relates to the topic"
+      relevance: "How it relates"
       key_findings: "Main insights"
     
   interviews:
@@ -228,65 +521,11 @@ situation_analysis:
   
   created_by: user_id
   created_at: timestamp
-  last_updated: timestamp
-```
+  phase: "phase4_conceptualisation"
 
----
-
-### Phase 5: Conceptualisation Phase
-
-**Purpose**: Develop the theoretical foundation and practical plan for intervention
-
-**Actors**: Professionals (with community consultation)
-
-**Activities**:
-
-#### A. Theory of Change
-- Define long-term vision
-- Map outcome pathways
-- Identify assumptions
-- Define preconditions
-- Create visual Theory of Change diagram
-
-#### B. Stakeholder Mapping
-- Identify all relevant stakeholders
-- Categorize by influence and interest
-- Map relationships between stakeholders
-- Define engagement strategies
-- Identify potential champions and blockers
-
-#### C. Intervention Plan
-- Define specific interventions
-- Set objectives and indicators
-- Develop implementation timeline
-- Assign responsibilities
-- Define resource requirements
-
-#### D. Resource and Budget Planning
-- Identify required resources (human, financial, material)
-- Create detailed budget
-- Identify funding sources
-- Develop resource mobilization plan
-
-#### E. Monitoring and Evaluation Concept
-- Define monitoring framework
-- Develop evaluation questions
-- Design data collection tools
-- Establish reporting mechanisms
-- Define learning and adaptation processes
-
-**Outputs**:
-- Theory of Change document and diagram
-- Stakeholder analysis and engagement plan
-- Intervention logic model
-- Detailed implementation plan
-- Resource mobilization plan
-- Budget
-- Monitoring and Evaluation (M&E) framework
-
-**Data Structure**:
-```yaml
 theory_of_change:
+  id: unique_identifier
+  project_id: reference_to_project
   vision: "Long-term vision statement"
   pathways:
     - pathway: "Pathway description"
@@ -298,13 +537,16 @@ theory_of_change:
   visual_diagram: file_reference
   created_at: timestamp
   last_updated: timestamp
+  phase: "phase4_conceptualisation"
 
 stakeholder_map:
+  id: unique_identifier
+  project_id: reference_to_project
   stakeholders:
     - id: unique_identifier
       name: "Stakeholder name"
       role: "Role in project"
-      organization: "Organization (if applicable)"
+      organization: "Organization"
       influence_level: "high|medium|low"
       interest_level: "high|medium|low"
       position: "supportive|neutral|opposing|unknown"
@@ -313,22 +555,34 @@ stakeholder_map:
   
   created_at: timestamp
   last_updated: timestamp
+  phase: "phase4_conceptualisation"
 
 intervention_plan:
-  objective: "Main objective"
-  indicators: ["indicator1", "indicator2"]
-  timeline:
-    - phase: "Phase name"
-      start_date: YYYY-MM-DD
-      end_date: YYYY-MM-DD
-      activities: ["activity1", "activity2"]
+  id: unique_identifier
+  project_id: reference_to_project
+  interventions:
+    - intervention_id: unique_identifier
+      name: "Intervention name"
+      description: "Detailed description"
+      objective: "What this intervention aims to achieve"
+      indicators: ["indicator1", "indicator2"]
+      target_groups: ["group1", "group2"]
+      implementation_approach: "How it will be implemented"
+      timeline:
+        start_date: YYYY-MM-DD
+        end_date: YYYY-MM-DD
+        milestones: [milestone1, milestone2]
       responsible: user_id
       resources_needed: ["resource1", "resource2"]
+      budget_allocation: amount
   
   created_at: timestamp
   last_updated: timestamp
+  phase: "phase4_conceptualisation"
 
 budget:
+  id: unique_identifier
+  project_id: reference_to_project
   income:
     - source: "Funding source"
       amount: 00.00
@@ -349,8 +603,11 @@ budget:
   
   created_at: timestamp
   last_updated: timestamp
+  phase: "phase4_conceptualisation"
 
 m_and_e_framework:
+  id: unique_identifier
+  project_id: reference_to_project
   monitoring:
     indicators: ["indicator1", "indicator2"]
     data_collection_methods: ["method1", "method2"]
@@ -368,44 +625,16 @@ m_and_e_framework:
   
   created_at: timestamp
   last_updated: timestamp
+  phase: "phase4_conceptualisation"
 ```
 
----
-
-### Phase 6: Implementation Phase
-
-**Purpose**: Execute the intervention plan with ongoing monitoring and evaluation
-
-**Actors**: Professionals, Community Members, Stakeholders
-
-**Activities**:
-- Execute planned activities
-- Monitor progress against indicators
-- Collect monitoring data
-- Adjust implementation based on findings
-- Regular reporting
-- Community feedback sessions
-
-**Tools Available**:
-- Activity tracking
-- Progress dashboards
-- Data collection forms
-- Reporting templates
-- Communication tools
-- Document repository
-
-**Outputs**:
-- Activity reports
-- Monitoring data
-- Progress updates
-- Adjustment decisions
-- Community feedback
-
-**Data Structure**:
+### Phase 5: Implementation
 ```yaml
 implementation:
+  project_id: reference_to_project
   activities:
     - activity_id: reference_to_activity
+      intervention_id: reference_to_intervention
       status: "not_started|in_progress|completed|on_hold|cancelled"
       start_date: actual_start_date
       end_date: actual_end_date
@@ -439,42 +668,15 @@ implementation:
       date: timestamp
       approved_by: user_id
       impact: "Expected impact of adjustment"
+  
+  phase: "phase5_implementation"
 ```
 
----
-
-### Phase 7: Evaluation Phase
-
-**Purpose**: Assess the outcomes and impact of the intervention
-
-**Actors**: Professionals, Community Members, External Evaluators (optional)
-
-**Activities**:
-- Conduct final evaluation
-- Analyze all collected data
-- Assess achievement of objectives
-- Document lessons learned
-- Develop recommendations
-- Create final report
-- Share findings with stakeholders
-
-**Methods**:
-- Outcome harvesting
-- Most significant change technique
-- Participatory evaluation
-- Quantitative analysis
-- Qualitative analysis
-
-**Outputs**:
-- Evaluation report
-- Lessons learned document
-- Recommendations for future projects
-- Impact assessment
-- Final project documentation
-
-**Data Structure**:
+### Phase 6: Evaluation + Project Report
 ```yaml
 evaluation:
+  id: unique_identifier
+  project_id: reference_to_project
   evaluation_questions: ["question1", "question2"]
   methods_used: ["method1", "method2"]
   
@@ -499,18 +701,97 @@ evaluation:
       scale: "scale of impact"
       sustainability: "Likelihood of sustainability"
       
-  final_report:
-    content: "Full report content"
-    attachments: [file_reference_1, file_reference_2]
-    created_by: user_id
-    created_at: timestamp
-    
   stakeholder_feedback:
     - stakeholder: reference_to_stakeholder
       feedback: "Feedback received"
       satisfaction_level: "high|medium|low"
       suggestions: ["suggestion1", "suggestion2"]
+  
+  created_at: timestamp
+  last_updated: timestamp
+  phase: "phase6_evaluation"
+
+project_report:
+  id: unique_identifier
+  project_id: reference_to_project
+  title: "Project Report"
+  version: "1.0"
+  date: timestamp
+  
+  sections:
+    executive_summary: "Brief overview"
+    introduction: "Project background"
+    methodology: "How the project was conducted"
+    findings: "Key findings from all phases"
+    analysis: "Detailed analysis"
+    interventions: "Description of interventions implemented"
+    results: "Results achieved"
+    lessons_learned: "Lessons from the project"
+    recommendations: "Recommendations for future"
+    impact_assessment: "Assessment of project impact"
+    conclusion: "Final thoughts"
+  
+  attachments: [file_reference_1, file_reference_2]
+  
+  created_by: user_id
+  created_at: timestamp
+  approved_by: user_id
+  approved_at: timestamp
+  
+  status: "draft|in_review|approved|final"
+  phase: "phase6_evaluation"
 ```
+
+---
+
+## Phase Transition Rules
+
+### Linear Progression
+- **Phase 1 → Phase 2**: Automatic after project creation
+- **Phase 2 → Phase 3**: Requires minimum data collected (configurable threshold)
+- **Phase 3 → Phase 4**: Requires topic selection and project configuration completion
+- **Phase 4 → Phase 5**: Requires intervention plan approval
+- **Phase 5 → Phase 6**: Requires all interventions to be completed or marked as complete
+
+### Phase Completion Requirements
+
+| Phase | Completion Criteria | Required for Next Phase |
+|-------|---------------------|-------------------------|
+| 1 | Project created with basic metadata | Yes |
+| 2 | Sufficient data collected and tagged | Yes |
+| 3 | Topic selected + Project configured | Yes |
+| 4 | Interventions defined + Plans approved | Yes |
+| 5 | All interventions executed | Yes |
+| 6 | Project report finalized | No (terminal phase) |
+
+### Backtracking
+- Users can go back to previous phases to make adjustments
+- Changes in earlier phases may require re-validation of subsequent phases
+- Audit trail maintained for all changes
+
+---
+
+## User Roles and Permissions
+
+### Role Definitions
+
+| Role | Description | Access Level |
+|------|-------------|--------------|
+| **Professional** | Project coordinator/manager | Full access to all phases and features |
+| **Community Member** | Community representative | Can contribute data, view project info, limited editing |
+| **Stakeholder** | External stakeholder | View-only access, can provide feedback |
+| **Evaluator** | External evaluator | Access to evaluation features, read-only for other data |
+
+### Phase-Specific Permissions
+
+| Phase | Professional | Community Member | Stakeholder | Evaluator |
+|-------|-------------|-----------------|------------|-----------|
+| 1. Setup | Read/Write | No Access | No Access | No Access |
+| 2. Pre-Project | Read/Write | Read/Write | No Access | No Access |
+| 3. Topic Selection | Read/Write | Read | No Access | No Access |
+| 4. Conceptualisation | Read/Write | Read | Read | No Access |
+| 5. Implementation | Read/Write | Read/Write | Read | Read |
+| 6. Evaluation | Read/Write | Read | Read | Read/Write |
 
 ---
 
@@ -538,7 +819,8 @@ evaluation:
 ### 4. Accessibility
 - Multiple language support
 - Text-to-speech and speech-to-text
-- High contrast and large text modes
+- High contrast mode
+- Large text options
 - Keyboard navigation
 - Screen reader compatibility
 - Alternative text for images
@@ -562,37 +844,17 @@ evaluation:
 
 ### Core Technologies (Open Source)
 - **Frontend**: HTML5, CSS3, JavaScript (Progressive Web App for offline capability)
-- **Backend**: Node.js or Python (for server components, if needed)
-- **Database**: SQLite (local, file-based, no server required)
-- **Storage**: IndexedDB for browser-based storage
-- **Sync**: Custom sync protocol for multi-device offline-first sync
+- **Framework**: Vue.js 3 or Svelte (lightweight, easy to learn)
+- **Database**: IndexedDB (via Dexie.js) for PWA, SQLite for desktop/mobile
+- **Storage**: OPFS (Origin Private File System) or local file system
+- **Offline**: Service Workers for caching
+- **Sync**: Custom sync protocol for multi-device (optional)
 
 ### Data Storage Strategy
 1. **Local-First**: All data stored locally by default
-2. **Optional Sync**: Users can choose to sync with other devices or team members
-3. **Encryption**: Sensitive data encrypted at rest
-4. **Export**: Data can be exported in standard formats (JSON, CSV)
-5. **Backup**: Automatic local backups
-
-### File Structure
-```
-project_root/
-├── data/
-│   ├── projects/
-│   ├── users/
-│   ├── media/
-│   └── backups/
-├── docs/
-│   ├── workflow/
-│   ├── user_guides/
-│   └── technical/
-├── src/
-│   ├── frontend/
-│   ├── backend/
-│   └── shared/
-├── tests/
-└── README.md
-```
+2. **No Cloud Dependency**: Application works without internet
+3. **Optional Sync**: Users can choose to sync with other devices or team members
+4. **Conflict Resolution**: Handle conflicts from offline changes
 
 ---
 
@@ -602,13 +864,16 @@ project_root/
 - Project setup and configuration
 - Data collection (text notes, photos)
 - Basic clustering functionality
-- Simple topic selection
+- Topic selection
+- Project configuration finalization
+- Simple intervention planning
 
 ### Phase 2: Analysis Tools
 - Situation analysis templates
 - Stakeholder mapping
 - Theory of Change builder
-- Basic M&E framework
+- Budget calculation tools
+- M&E framework templates
 
 ### Phase 3: Advanced Features
 - Offline synchronization
@@ -625,18 +890,6 @@ project_root/
 
 ---
 
-## Next Steps
-
-1. **Review and Refine**: Review this workflow design with stakeholders
-2. **Prioritize Features**: Identify MVP features for initial implementation
-3. **Technical Design**: Create detailed technical specifications
-4. **Prototype**: Build a basic prototype to test the workflow
-5. **User Testing**: Test with potential users and gather feedback
-6. **Iterate**: Refine based on feedback
-7. **Implement**: Build the full application
-
----
-
 ## Questions for Clarification
 
 1. Should community members have different levels of access (view-only, contribute, edit)?
@@ -649,6 +902,6 @@ project_root/
 
 ---
 
-*Document Version: 1.0*
+*Document Version: 2.0*
 *Last Updated: 2024*
-*Status: Draft for Review*
+*Status: Revised - Linear Workflow*
